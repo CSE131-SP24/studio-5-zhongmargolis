@@ -4,15 +4,6 @@ import edu.princeton.cs.introcs.StdDraw;
 
 public class Methods {
 
-	/**
-	 * Compute the (Euclidean) distance between two points.
-	 *
-	 * @param x1 x-coordinate of a point
-	 * @param y1 y-coordinate of a point
-	 * @param x2 x-coordinate of another point
-	 * @param y2 y-coordinate of another point
-	 * @return the Euclidean distance between (x1,y1) and (x2,y2)
-	 */
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
 		double xsum = (x2-x1) * (x2-x1);
 		double ysum = (y2-y1) * (y2-y1);
@@ -62,7 +53,15 @@ public class Methods {
 	 */
 	public static String substituteAll(String source, char target, String replacement) {
 		String result = "";
-		// TODO: Finish this method
+
+		for (int i = 0; i < source.length(); i++) {
+			if (source.charAt(i) == target) {
+				result = result + replacement;
+			}
+			else {
+				result = result + source.charAt(i);
+			}
+		}
 		
 		return result;
 	}
@@ -75,7 +74,6 @@ public class Methods {
 	 */
 	public static int arraySum(int[] values) {
 		int sum = 0;
-		// FIXME: Compute the sum of the values in an array
 		
 		return sum;
 	}

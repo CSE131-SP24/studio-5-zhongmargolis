@@ -14,8 +14,9 @@ public class Methods {
 	 * @return the Euclidean distance between (x1,y1) and (x2,y2)
 	 */
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
-		double distance = 0;
-		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
+		double xsum = (x2-x1) * (x2-x1);
+		double ysum = (y2-y1) * (y2-y1);
+		double distance = Math.sqrt((xsum + ysum));
 		
 		return distance;
 	}
